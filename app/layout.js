@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'NextLevel Food',
-  description: 'Delicious meals, shared by a food-loving community.',
+  title: 'Akquinet Beeferando',
+  description: 'Order meals, NOW!',
 };
 
 export default function RootLayout({ children }) {
