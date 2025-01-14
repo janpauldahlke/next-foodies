@@ -1,14 +1,17 @@
 import Link from "next/link";
-import logoImg from '@/assets/logo.png'
+import Image from "next/image";
 
+import GradientForLayout from "./gradient/Gradient";
+import logoImg from '@/assets/logo.png'
 import styles from './Header.module.css'
 
 const Header = () => { 
   return (
     <>
+      <GradientForLayout></GradientForLayout>
       <header className={styles.header}>
         <Link className={ styles.logo}  href="/" >
-          <img src={logoImg.src} alt="Logo" />
+          <Image src={logoImg} alt="Logo" priority/>
           NextLevel Food
         </Link>
         <nav className={styles.nav}>
