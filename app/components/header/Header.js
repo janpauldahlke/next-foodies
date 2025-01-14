@@ -1,11 +1,17 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 
 import GradientForLayout from "./gradient/Gradient";
 import logoImg from '@/assets/logo.png'
 import styles from './Header.module.css'
+import { usePathname } from "next/navigation";
 
 const Header = () => { 
+
+  const path = usePathname()
+
   return (
     <>
       <GradientForLayout></GradientForLayout>
@@ -17,10 +23,10 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <Link href="/meals" >Browse meals</Link>
+              <Link href="/meals" className={path.startsWith('/meals') ? styles.active : undefined}>Browse meals</Link>
             </li>
             <li>
-            <Link href="/community" >Community</Link>
+              <Link href="/community" className={ path === '/community' ? styles.active : undefined}>Community</Link>
             </li>
           </ul>
         </nav>
