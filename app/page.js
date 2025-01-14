@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import ImageSlideshow from './components/images/image-slideshow';
+
 import styles from './page.module.css'
 
 export default function Home() {
@@ -7,7 +9,7 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <div className={styles.slideshow}>
-          
+          <ImageSlideshow ></ImageSlideshow>
         </div>
         <div>
           <div className={styles.hero}>
