@@ -33,6 +33,9 @@
   text-align: center;
   color: #a4abb9;
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+
 }
 
 .preview p {
@@ -42,4 +45,36 @@
 
 .preview img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.previewContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.removeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
