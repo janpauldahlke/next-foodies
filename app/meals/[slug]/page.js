@@ -4,7 +4,6 @@ import styles from './page.module.css';
 import { getMeal } from '@/lib/meals';
 
 const MealDetailsPage = ({ params }) => {
-
   const {
     title,
     image,
@@ -18,7 +17,7 @@ const MealDetailsPage = ({ params }) => {
     <>
       <header className={ styles.header}>
         <div className={styles.image}>
-          <Image src={image}  fill/>
+          <Image src={image} alt={ title}  fill/>
         </div>
         <div className={styles.headerText}>
           <h1>{ title }</h1>
