@@ -17,12 +17,14 @@
 }
 
 .hero h1 {
-  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background: linear-gradient(90deg, #fff, #bcbbbb);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

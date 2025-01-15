@@ -2,8 +2,17 @@ import Image from 'next/image';
 
 import styles from './page.module.css';
 import { getMeal } from '@/lib/meals';
+import { notFound } from 'next/navigation';
 
 const MealDetailsPage = ({ params }) => {
+  const meal = getMeal(params.slug) // the params obj will have a [slug] param, see dynamic route creation
+
+  if (!meal) {
+    //will ensure redirect to closest not found or error page
+    //comes within nextjs
+    notFound()
+  }
+
   const {
     title,
     image,
@@ -11,7 +20,7 @@ const MealDetailsPage = ({ params }) => {
     instructions,
     creator,
     creator_email,
-  } = getMeal(params.slug) // the params obj will have a [slug] param, see dynamic route creation
+  } = meal
 
   return (
     <>
