@@ -1,24 +1,8 @@
+import { shareMealServerAction } from '@/lib/actions'; // one could import server actions 'use server' in components that have the 'use client' directive on top
 import MealsImagePicker from '@/app/components/meals/image-picker';
 import styles from './page.module.css';
 
 export default function ShareMealPage() {
-
-  //check here how to make use of 'use server'
-  // since we rneder on the server, the data is already there and we do not need to collect and onSubmit the old fashioned way
-  // called ServerAction in nextjs terminology
-  const shareMealServerAction =  async (formData) => { 
-    'use server';
-    const mealFromFormFields = {
-      creator: formData.get('name'),
-      creator_email: formData.get('email'),
-      title: formData.get('title'),
-      summary: formData.get('summary'),
-      instructions: formData.get('instructions'),
-      image: formData.get('image'),
-    }
-
-    console.log('formData', mealFromFormFields)
-  }
 
   return (
     <>
