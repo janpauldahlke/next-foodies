@@ -193,7 +193,8 @@ async function initData() {
       )
    `);
 
-  for (const meal of dummyMeals) {
+   for (const meal of dummyMeals) {
+     console.log('save meal in db', meal)
     stmt.run(meal);
   }
 }

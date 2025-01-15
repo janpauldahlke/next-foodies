@@ -3,9 +3,10 @@ import styles from "./page.module.css";
 import MealsGrid from "../components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 
-const MealsPage = () => {
+// note that we can be aync on toplevel, when working with server components
+const MealsPage = async () => {
   // Fetching meals data from the server
-  const meals = getMeals();
+  const meals = await getMeals();
 
   // For debugging, remove the log once done
   console.log("meals");
