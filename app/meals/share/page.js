@@ -3,8 +3,15 @@ import MealsImagePicker from '@/app/components/meals/image-picker';
 
 import styles from './page.module.css';
 import ShareFormButton from './share-button';
+//import { useActionState } from 'react';
+//import { useFormState } from 'react-dom';
 
 export default function ShareMealPage() {
+
+  // only available on > react 18.3 
+  //const [ state, formAction ] = useActionState(shareMealServerAction, { message: null} )
+  //const [state, formAction] = useFormState(shareMealServerAction, { message: null });
+
 
   return (
     <>
@@ -15,6 +22,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={styles.main}>
+
         <form className={styles.form} action={ shareMealServerAction }>
           <div className={styles.row}>
             <p>
@@ -44,6 +52,7 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <MealsImagePicker name="image" label="Your image"></MealsImagePicker>
+          {/*state.message && <p className='error'>{ state.message }</p>*/}
           <p className={styles.actions}>
             <ShareFormButton />
           </p>

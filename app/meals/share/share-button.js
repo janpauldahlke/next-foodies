@@ -8,7 +8,6 @@ const ShareFormButton = () => {
 
   return (
     <button
-      disable={pending}
       type="submit">{!pending ? 'Share Meal' : 'Submitting.....'}</button>
   )
 }
