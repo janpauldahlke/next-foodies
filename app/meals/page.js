@@ -4,11 +4,15 @@ import MealsGrid from "../components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+//example of different stattic metadata in a deeper nested page
+export const metadata = () => ({
+  title: 'All Meals',
+  description: 'browse all meals'
+})  
+
+
 //this is the prefered way in nextjs for loading spinners, use <Suspense>
 const Meals = async () => { 
-
-
-
   //NOTE:: when running npm run build and start
   //nextjs will cache all pages, also this one and the getMeals will only be used once on build, but when adding more meals in prod runtime, we never see them!
   //catchy

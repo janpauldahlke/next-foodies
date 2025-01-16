@@ -20,7 +20,7 @@ i've created this codesandbox here
 >* Redis
 
 
-#### beware the difference of prod static and runtime
+# beware the difference of prod static and runtime
 
 ```jsx
 const Meals = async () => { 
@@ -49,3 +49,8 @@ const Meals = async () => {
  > with the result that we can't see uploaded images
  > we would need to use a s3 bucket or else
  > continue reading here : [static and remote images](https://nextjs.org/docs/app/building-your-application/optimizing/images#remote-images)
+
+ #### metadata && seo optimization
+ > docs [for metadta ](https://nextjs.org/docs/app/api-reference/functions/generate-metadata)
+ > can we provided to any page by using `export function metadata {}` like we already know
+ > to dynamically generate it we need to provide `export async function generateMetadata` the naming is important here
