@@ -6,6 +6,12 @@ import { Suspense } from "react";
 
 //this is the prefered way in nextjs for loading spinners, use <Suspense>
 const Meals = async () => { 
+
+
+
+  //NOTE:: when running npm run build and start
+  //nextjs will cache all pages, also this one and the getMeals will only be used once on build, but when adding more meals in prod runtime, we never see them!
+  //catchy
   const meals = await getMeals();
 
   return <MealsGrid meals={meals}></MealsGrid>
