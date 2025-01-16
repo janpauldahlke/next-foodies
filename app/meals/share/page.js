@@ -1,6 +1,8 @@
 import { shareMealServerAction } from '@/lib/actions'; // one could import server actions 'use server' in components that have the 'use client' directive on top
 import MealsImagePicker from '@/app/components/meals/image-picker';
+
 import styles from './page.module.css';
+import ShareFormButton from './share-button';
 
 export default function ShareMealPage() {
 
@@ -43,7 +45,7 @@ export default function ShareMealPage() {
           </p>
           <MealsImagePicker name="image" label="Your image"></MealsImagePicker>
           <p className={styles.actions}>
-            <button type="submit">Share Meal</button>
+            <ShareFormButton />
           </p>
         </form>
       </main>
